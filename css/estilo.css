@@ -1,0 +1,251 @@
+/* Aquí vamos a trabajar con la creación de un sistema de columnas */
+*{
+margin: 0;
+padding: 0;
+list-style: none;
+text-decoration: none;
+font-family: sans-serif;
+box-sizing: border-box;
+}
+.contenedor{
+position: relative;
+margin: auto;
+width: 100%;
+height: auto;
+}
+.fila{
+position: relative;
+margin: auto;
+width: 100%;
+height: auto;
+clear: both;
+display: table;
+}
+[class*="col-"]{
+float: left;
+/* background: skyblue;
+border: 1px solid red; */
+padding: 10px;
+}
+
+/*SECIÓN 1*/
+header #logo {
+font-family: sans-serif;
+font-size: 45px;
+text-align: center;
+line-height: 50px;
+}
+header center p{
+	text-align: center;
+	width: 40px;
+	height: 40px;
+	background: blueviolet;
+	border-radius: 100%;
+	line-height: 40px;
+}
+header center.icono1 p{
+	background: darkred;
+}
+header center.icono2 p{
+	background: purple;
+}
+header center.icono3 p{
+	background: red;
+}
+
+/*SECIÓN 2*/
+nav ul li{
+	padding: 10px;
+	text-align: center;
+}
+nav ul li a{
+	display: block;
+	background: hsl(197, 73%, 47%);
+	font-family: sans-serif;
+	color: white;
+	line-height: 48px;
+}
+nav ul li a:hover{
+	background: darkgreen;
+}
+
+/*SECIÓN 3*/
+#seccion3 center{
+	padding: 10px;
+}
+#seccion3 img{
+	border-radius: 100%;
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+}
+#seccion3 h1{
+	font-family: sans-serif;
+	font-size: 40px;
+	padding: 10px;
+}
+#seccion3 p{
+	padding: 10px;
+}
+
+/*SECIÓN 4*/
+#seccion4 #izq ul li{
+	background: #ccc;
+	padding: 10px;
+	margin: 2px 10px;
+	list-style: square;
+	list-style-position: inside;
+	list-style-image: url(../img/lista.png);
+}
+#seccion4 #article h1{
+	font-family: sans-serif;
+	font-size: 35px;
+	margin: 10px;
+}
+#seccion4 #article p img{
+	float: left;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+#seccion4 #article p{
+	margin: 5px 20px;
+	font-size: 14px;
+	text-align: justify;
+}
+#seccion4 #der h1{
+	text-align: center;
+	padding: 15px;
+	margin-bottom: 5px;
+	background: skyblue;
+	font-size: 25px;
+	font-family: sans-serif;
+	color: red;
+	box-shadow: 0px 0px 6px 0px black;
+	border-radius: 4px;
+}
+#seccion4 aside#der input{
+	width: 100%;
+	padding: 10px;
+	margin: 5px 0;
+/* 	border: 0px;
+	box-shadow: 0px 0px 6px 0px black;
+	border-radius: 4px; */
+}
+#seccion4 aside#der input[type="text"]{
+	background-image: url(../img/usuario.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: contain;
+}
+#seccion4 aside#der input[type="password"]{
+	background-image: url(../img/password.png);
+	background-repeat: no-repeat;
+	background-position: right;
+	background-size: contain;
+}
+#seccion4 aside#der input[type="submit"]{
+	background: palevioletred;
+	border: 0px;
+}
+#seccion4 aside#der #divder{
+	box-shadow: 0px 0px 6px 0px black;
+	padding: 10px;
+}
+
+/* SECCIÓN 5 */
+footer{
+	padding: 20px 10px;
+}
+
+footer div{
+	background: steelblue;
+	text-align: center;
+	line-height: 30px;
+	color: whitesmoke;
+	text-shadow: 0px 0px 10px red;
+	font-size: 30px;
+}
+
+/* Pantalla de escritorio grande - Large lg*/
+@media(min-width: 1200px){
+.col-lg-12{width: 100%}
+.col-lg-11{width: 91.66666667%}
+.col-lg-10{width: 83.33333333%}
+.col-lg-9{width: 75%}
+.col-lg-8{width: 66.66666667%}
+.col-lg-7{width: 58.33333333%}
+.col-lg-6{width: 50%}
+.col-lg-5{width: 41.66666667%}
+.col-lg-4{width: 33.33333333%}
+.col-lg-3{width: 25%}
+.col-lg-2{width: 16.66666667%}
+.col-lg-1{width: 8.33333333%}
+.col-lg-0{display: none;}
+}
+
+/*#seccion4 #article p img{
+	width: 50%;
+}
+*/
+/* Pantalla de escritorio mediana - medium md */
+@media(max-width: 1200px) and (min-width: 992px) {
+.col-md-12{width: 100%}
+.col-md-11{width: 91.66666667%}
+.col-md-10{width: 83.33333333%}
+.col-md-9{width: 75%}
+.col-md-8{width: 66.66666667%}
+.col-md-7{width: 58.33333333%}
+.col-md-6{width: 50%}
+.col-md-5{width: 41.66666667%}
+.col-md-4{width: 33.33333333%}
+.col-md-3{width: 25%}
+.col-md-2{width: 16.66666667%}
+.col-md-1{width: 8.33333333%}
+.col-md-0{display: none;}
+}
+
+/*#seccion4 #article p img{
+	width: 60%;
+}*/
+
+/* Pantalla de escritorio pequeña - tablet small sm */
+@media(max-width: 991px) and (min-width: 768px) {
+.col-sm-12{width: 100%}
+.col-sm-11{width: 91.66666667%}
+.col-sm-10{width: 83.33333333%}
+.col-sm-9{width: 75%}
+.col-sm-8{width: 66.66666667%}
+.col-sm-7{width: 58.33333333%}
+.col-sm-6{width: 50%}
+.col-sm-5{width: 41.66666667%}
+.col-sm-4{width: 33.33333333%}
+.col-sm-3{width: 25%}
+.col-sm-2{width: 16.66666667%}
+.col-sm-1{width: 8.33333333%}
+.col-sm-0{display: none;}
+}
+
+/*#seccion4 #article p img{
+	width: 80%;
+}*/
+
+/* Pantalla de escritorio muy pequeña - phone xs */
+@media(max-width: 767px) {
+.col-xs-12{width: 100%}
+.col-xs-11{width: 91.66666667%}
+.col-xs-10{width: 83.33333333%}
+.col-xs-9{width: 75%}
+.col-xs-8{width: 66.66666667%}
+.col-xs-7{width: 58.33333333%}
+.col-xs-6{width: 50%}
+.col-xs-5{width: 41.66666667%}
+.col-xs-4{width: 33.33333333%}
+.col-xs-3{width: 25%}
+.col-xs-2{width: 16.66666667%}
+.col-xs-1{width: 8.33333333%}
+.col-xs-0{display: none;}
+}
+
+/*#seccion4 #article p img{
+	width: 100%;
+}*/
